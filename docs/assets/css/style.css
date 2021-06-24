@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 50px;
+}
+
+.cards {
+  font-size: 0;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  min-width: 400px;
+  padding: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+
+  overflow: hidden;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  color: white;
+}
+
+.card:not(:last-child) {
+  margin-right: 50px;
+}
+
+.card::before {
+  position: absolute;
+  top: -25px;
+  right: -100px;
+
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card::after {
+  position: absolute;
+  bottom: -100px;
+  right: -30px;
+
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card--pink {
+  background: linear-gradient(to right, #febe9d, #fc8a9c 75%);
+}
+
+.card--blue {
+  background: linear-gradient(to right, #8bcaf5, #2296e1 75%);
+}
+
+.card--green {
+  background: linear-gradient(to right, #6dd8cd, #5de1d0 75%);
+}
+
+.card-content {
+  position: relative;
+}
+
+.card-content::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  content: "";
+  width: 24px;
+  height: 24px;
+}
+.card-content--icon-chart::after {
+  background-image: url(../img/chart.png);
+}
+
+.card-content--icon-bookmark::after {
+  background-image: url(../img/bookmark.png);
+}
+
+.card-content--icon-diamond::after {
+  background-image: url(../img/diamond.png);
+}
+
+.card-content-heading {
+  margin-bottom: 15px;
+
+  font-weight: lighter;
+}
+.card-content-value {
+  margin-bottom: 30px;
+
+  font-size: 40px;
+  font-weight: bold;
+}
