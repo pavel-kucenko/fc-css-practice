@@ -32,11 +32,9 @@ body {
   margin-right: 50px;
 }
 
-.card::before {
+.card::before, 
+.card::after {
   position: absolute;
-  top: -25px;
-  right: -100px;
-
   content: "";
   width: 200px;
   height: 200px;
@@ -44,16 +42,14 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.card::before {
+  top: -25px;
+  right: -100px;
+}
+
 .card::after {
-  position: absolute;
   bottom: -100px;
   right: -30px;
-
-  content: "";
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
 }
 
 .card--pink {
@@ -65,7 +61,7 @@ body {
 }
 
 .card--green {
-  background: linear-gradient(to right, #6dd8cd, #5de1d0 75%);
+  background: linear-gradient(to right, #5de1d0, #6dd8cd 75%);
 }
 
 .card-content {
@@ -76,11 +72,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-
   content: "";
   width: 24px;
   height: 24px;
 }
+
 .card-content--icon-chart::after {
   background-image: url(../img/chart.png);
 }
@@ -96,8 +92,10 @@ body {
 .card-content-heading {
   margin-bottom: 15px;
 
+  font-size: 16px;
   font-weight: lighter;
 }
+
 .card-content-value {
   margin-bottom: 30px;
 
